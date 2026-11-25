@@ -1,0 +1,310 @@
+
+/* =====================================
+   EXPLOREX - RESPONSIVE DESIGN
+===================================== */
+
+/* TABLETS */
+
+@media screen and (max-width: 1024px) {
+
+  .navbar {
+    padding: 18px 5%;
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .hero {
+    padding: 75px 6%;
+    gap: 25px;
+  }
+
+  .hero h1 {
+    font-size: 56px;
+  }
+
+  .hero-visual {
+    transform: scale(0.85);
+  }
+
+  .section {
+    padding: 75px 6%;
+  }
+
+  .planner-section {
+    margin: 25px 4%;
+    padding: 40px;
+    gap: 35px;
+  }
+
+  .destination-grid {
+    gap: 16px;
+  }
+
+  .feature-grid {
+    gap: 15px;
+  }
+}
+
+/* SMALL TABLETS */
+
+@media screen and (max-width: 768px) {
+
+  .navbar {
+    min-height: 75px;
+    padding: 15px 5%;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    padding: 25px;
+    background: #10172b;
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-actions {
+    gap: 10px;
+  }
+
+  .nav-button {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 70px 7% 40px;
+  }
+
+  .hero-content > p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .eyebrow {
+    justify-content: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-stats {
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .hero-visual {
+    height: 360px;
+    transform: scale(0.85);
+    margin-top: 10px;
+  }
+
+  .destination-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .destination-card:last-child {
+    grid-column: span 2;
+  }
+
+  .planner-section {
+    grid-template-columns: 1fr;
+    padding: 35px;
+  }
+
+  .planner-content {
+    text-align: center;
+  }
+
+  .planner-content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* MOBILE PHONES */
+
+@media screen and (max-width: 480px) {
+
+  .navbar {
+    padding: 13px 5%;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .logo small {
+    font-size: 8px;
+  }
+
+  #languageSelect {
+    max-width: 105px;
+    padding: 8px 5px;
+    font-size: 11px;
+  }
+
+  .hero {
+    padding: 55px 6% 25px;
+  }
+
+  .hero h1 {
+    font-size: 43px;
+    letter-spacing: -1.5px;
+  }
+
+  .hero-content > p {
+    font-size: 14px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+  }
+
+  .hero-stats {
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .hero-stats strong {
+    font-size: 21px;
+  }
+
+  .hero-stats span {
+    font-size: 10px;
+  }
+
+  .hero-visual {
+    height: 290px;
+    transform: scale(0.7);
+    margin: -5px -40px;
+  }
+
+  .globe {
+    width: 250px;
+    height: 250px;
+  }
+
+  .globe-inner {
+    font-size: 130px;
+  }
+
+  .floating-card {
+    padding: 10px;
+  }
+
+  .card-top {
+    right: -5px;
+  }
+
+  .card-bottom {
+    left: -5px;
+  }
+
+  .section {
+    padding: 60px 6%;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .section-heading h2,
+  .planner-content h2 {
+    font-size: 34px;
+  }
+
+  .destination-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .destination-card,
+  .destination-card img {
+    min-height: 330px;
+  }
+
+  .destination-card:last-child {
+    grid-column: auto;
+  }
+
+  .planner-section {
+    margin: 15px 4%;
+    padding: 25px 17px;
+    border-radius: 18px;
+  }
+
+  .planner-form {
+    padding: 18px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    padding: 25px;
+  }
+
+  .footer {
+    padding: 40px 15px;
+  }
+}
+
+/* EXTRA SMALL SCREENS */
+
+@media screen and (max-width: 350px) {
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero-stats {
+    gap: 12px;
+  }
+
+  .hero-stats strong {
+    font-size: 18px;
+  }
+
+  .hero-visual {
+    transform: scale(0.58);
+    margin-left: -50px;
+    margin-right: -50px;
+  }
+
+  #languageSelect {
+    max-width: 90px;
+  }
+}

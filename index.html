@@ -2,287 +2,235 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ExploreX | AI Travel Assistant</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ExploreX — Discover destinations, plan trips and explore the world with intelligent travel tools.">
+  <title>ExploreX | Discover Beyond Boundaries</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
 </head>
 
 <body>
+  <div class="background-glow glow-one"></div>
+  <div class="background-glow glow-two"></div>
 
-<header>
-    <nav class="navbar">
-        <h2 class="logo">Explore<span>X</span></h2>
+  <header class="navbar">
+    <a href="#" class="logo">Explore<span>X</span><small>AI TRAVEL</small></a>
 
-        <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#destinations">Destinations</a>
-            <a href="#hotels">Hotels</a>
-            <a href="#food">Food</a>
-            <a href="#guides">Tour Guides</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#destinations">Destinations</a>
+      <a href="#planner">Trip Planner</a>
+      <a href="#features">Features</a>
+    </nav>
+
+    <div class="nav-actions">
+      <select id="languageSelect" aria-label="Choose language">
+        <option value="en">English</option>
+        <option value="ta">தமிழ்</option>
+        <option value="hi">हिन्दी</option>
+        <option value="te">తెలుగు</option>
+        <option value="ml">മലയാളം</option>
+        <option value="kn">ಕನ್ನಡ</option>
+        <option value="mr">मराठी</option>
+        <option value="ur">اردو</option>
+        <option value="saw">Saurashtra</option>
+      </select>
+
+      <a href="#planner" class="nav-button">Plan a Trip ↗</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <div class="eyebrow">
+          <span class="status-dot"></span>
+          YOUR NEXT ADVENTURE STARTS HERE
         </div>
 
-        <a href="#chatbot" class="nav-btn">AI Assistant</a>
-    </nav>
-</header>
-
-<section class="hero" id="home">
-    <div class="hero-content">
-        <p class="tagline">DISCOVER THE WORLD WITH AI</p>
-
-        <h1>Explore The World.<br>
-        <span>Experience Everything.</span></h1>
+        <h1>
+          Discover the world.<br>
+          <span>Beyond boundaries.</span>
+        </h1>
 
         <p>
-            Your intelligent travel companion.
-            Discover destinations, hotels, local foods
-            and unforgettable experiences worldwide.
+          Explore extraordinary destinations, discover local cultures
+          and create unforgettable journeys with your intelligent AI
+          travel companion.
         </p>
 
-        <div class="search-box">
-            <input type="text" id="destinationSearch"
-            placeholder="Where do you want to travel?">
-
-            <button onclick="searchDestination()">Explore</button>
+        <div class="hero-buttons">
+          <a href="#planner" class="primary-button">Start Exploring ↗</a>
+          <a href="#destinations" class="secondary-button">Discover Places</a>
         </div>
 
-        <a href="#destinations" class="main-btn">
-            Discover Destinations →
-        </a>
-    </div>
-</section>
-
-<section class="section" id="destinations">
-    <div class="section-heading">
-        <p>EXPLORE THE WORLD</p>
-        <h2>Popular Destinations</h2>
-    </div>
-
-    <div class="card-container">
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=800">
-            <div class="card-content">
-                <h3>New York, USA</h3>
-                <p>Discover the city that never sleeps.</p>
-                <a href="https://www.google.com/maps/search/New+York" target="_blank">View Map →</a>
-            </div>
+        <div class="hero-stats">
+          <div><strong>190+</strong><span>Countries</span></div>
+          <div><strong>10K+</strong><span>Destinations</span></div>
+          <div><strong>24/7</strong><span>Travel Assistant</span></div>
         </div>
+      </div>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800">
-            <div class="card-content">
-                <h3>Paris, France</h3>
-                <p>Experience art, culture and beauty.</p>
-                <a href="https://www.google.com/maps/search/Paris" target="_blank">View Map →</a>
-            </div>
+      <div class="hero-visual">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="globe">
+          <div class="globe-inner">🌍</div>
         </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800">
-            <div class="card-content">
-                <h3>Tokyo, Japan</h3>
-                <p>Explore modern technology and tradition.</p>
-                <a href="https://www.google.com/maps/search/Tokyo" target="_blank">View Map →</a>
-            </div>
+        <div class="floating-card card-top">
+          <span>✈️</span>
+          <div><strong>Adventure awaits</strong><small>Explore somewhere new</small></div>
         </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800">
-            <div class="card-content">
-                <h3>India</h3>
-                <p>Discover heritage, culture and traditions.</p>
-                <a href="https://www.google.com/maps/search/India+tourism" target="_blank">View Map →</a>
-            </div>
+        <div class="floating-card card-bottom">
+          <span>📍</span>
+          <div><strong>Your next destination</strong><small>Just one click away</small></div>
         </div>
+      </div>
+    </section>
 
-    </div>
-</section>
-
-<section class="section alternate" id="hotels">
-    <div class="section-heading">
-        <p>STAY COMFORTABLY</p>
-        <h2>Hotels & Accommodation</h2>
-    </div>
-
-    <div class="card-container">
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800">
-            <div class="card-content">
-                <h3>Luxury Hotels</h3>
-                <p>Explore premium hotel stays.</p>
-                <a href="https://www.google.com/maps/search/luxury+hotels" target="_blank">Find Hotels →</a>
-            </div>
+    <section class="section" id="destinations">
+      <div class="section-heading">
+        <div>
+          <span class="section-tag">EXPLORE THE PLANET</span>
+          <h2>Popular <span>Destinations</span></h2>
+          <p>Find inspiration for your next unforgettable journey.</p>
         </div>
+        <a href="#planner" class="text-link">Plan your journey ↗</a>
+      </div>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800">
-            <div class="card-content">
-                <h3>Resorts</h3>
-                <p>Enjoy relaxing holiday experiences.</p>
-                <a href="https://www.google.com/maps/search/resorts" target="_blank">Find Resorts →</a>
-            </div>
-        </div>
+      <div class="destination-grid">
+        <article class="destination-card">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900" alt="Mountain landscape">
+          <div class="destination-info">
+            <span>🇨🇭 Switzerland</span>
+            <h3>Mountain Escapes</h3>
+            <p>Nature · Adventure · Relaxation</p>
+          </div>
+        </article>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800">
-            <div class="card-content">
-                <h3>Budget Hotels</h3>
-                <p>Find comfortable affordable stays.</p>
-                <a href="https://www.google.com/maps/search/budget+hotels" target="_blank">Find Hotels →</a>
-            </div>
-        </div>
+        <article class="destination-card">
+          <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=900" alt="Coastal Italian village">
+          <div class="destination-info">
+            <span>🇮🇹 Italy</span>
+            <h3>Coastal Wonders</h3>
+            <p>Culture · Food · Beaches</p>
+          </div>
+        </article>
 
-    </div>
-</section>
+        <article class="destination-card">
+          <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=900" alt="Traditional Kyoto street">
+          <div class="destination-info">
+            <span>🇯🇵 Japan</span>
+            <h3>Timeless Traditions</h3>
+            <p>Heritage · Culture · Discovery</p>
+          </div>
+        </article>
+      </div>
+    </section>
 
-<section class="section" id="food">
-    <div class="section-heading">
-        <p>TASTE THE CULTURE</p>
-        <h2>Discover Native Foods</h2>
-    </div>
+    <section class="planner-section section" id="planner">
+      <div class="planner-content">
+        <span class="section-tag">SMART TRAVEL EXPERIENCE</span>
+        <h2>Your journey.<br><span>Your way.</span></h2>
+        <p>
+          Tell ExploreX where you want to go. Start building a trip
+          around your destination, travel dates and budget.
+        </p>
+      </div>
 
-    <div class="card-container">
+      <form class="planner-form" id="tripForm">
+        <label for="destination">Where do you want to go?</label>
+        <input id="destination" type="text" placeholder="Enter a destination" required>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=800">
-            <div class="card-content">
-                <h3>South Indian Food</h3>
-                <p>Dosa, Idli, Biryani and traditional meals.</p>
-                <a href="https://www.google.com/maps/search/South+Indian+restaurants" target="_blank">Find Food Shops →</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800">
-            <div class="card-content">
-                <h3>Italian Food</h3>
-                <p>Pizza, Pasta and authentic Italian dishes.</p>
-                <a href="https://www.google.com/maps/search/Italian+restaurants" target="_blank">Find Food Shops →</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800">
-            <div class="card-content">
-                <h3>Asian Food</h3>
-                <p>Explore traditional Asian cuisines.</p>
-                <a href="https://www.google.com/maps/search/Asian+restaurants" target="_blank">Find Food Shops →</a>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<section class="section alternate" id="places">
-    <div class="section-heading">
-        <p>PLAN YOUR VISIT</p>
-        <h2>Tourist Attractions</h2>
-    </div>
-
-    <div class="info-panel">
-        <h3>Explore Tourist Information</h3>
-
-        <input type="text" id="placeSearch"
-        placeholder="Enter tourist place name">
-
-        <button onclick="getPlaceInfo()">Find Information</button>
-
-        <div id="placeResult"></div>
-    </div>
-
-    <p class="small-note">
-        Find opening hours, closing hours, entry fees,
-        recommended visiting seasons and maps.
-        Verify details through official sources.
-    </p>
-</section>
-
-<section class="section" id="guides">
-    <div class="section-heading">
-        <p>TRAVEL WITH CONFIDENCE</p>
-        <h2>Tourist Guide Services</h2>
-    </div>
-
-    <div class="info-panel">
-        <h3>Find Local Tour Guides</h3>
-
-        <input type="text" id="guideLocation"
-        placeholder="Enter country, state or city">
-
-        <button onclick="findGuides()">Find Tour Guides</button>
-
-        <div id="guideResult"></div>
-    </div>
-</section>
-
-<section class="section chatbot-section" id="chatbot">
-    <div class="section-heading">
-        <p>YOUR PERSONAL TRAVEL ASSISTANT</p>
-        <h2>ExploreX AI Assistant</h2>
-    </div>
-
-    <div class="chat-container">
-
-        <div class="chat-header">
-            <div>
-                <h3>ExploreX AI</h3>
-                <p>● Travel assistant online</p>
-            </div>
-            <span>✈️</span>
-        </div>
-
-        <div class="language-select">
-            <label>Select Language:</label>
-
-            <select id="language">
-                <option value="en-US">English</option>
-                <option value="hi-IN">Hindi</option>
-                <option value="te-IN">Telugu</option>
-                <option value="ta-IN">Tamil</option>
+        <div class="form-row">
+          <div>
+            <label for="travelDate">Travel date</label>
+            <input id="travelDate" type="date" required>
+          </div>
+          <div>
+            <label for="travelers">Travellers</label>
+            <select id="travelers">
+              <option value="1">1 Traveller</option>
+              <option value="2">2 Travellers</option>
+              <option value="3">3 Travellers</option>
+              <option value="4">4 Travellers</option>
+              <option value="5+">5+ Travellers</option>
             </select>
+          </div>
         </div>
 
-        <div class="chat-messages" id="chatMessages">
-            <div class="bot-message">
-                Hello! Welcome to ExploreX.
-                Where would you like to travel?
-            </div>
-        </div>
+        <label for="budget">Estimated budget (₹)</label>
+        <input id="budget" type="number" min="1" placeholder="Example: 25000" required>
 
-        <div class="chat-input">
-            <input type="text" id="userMessage"
-            placeholder="Ask anything about travel...">
+        <button type="submit" class="primary-button full-button">Create My Trip ↗</button>
+        <p id="plannerMessage" class="form-message" aria-live="polite"></p>
+      </form>
+    </section>
 
-            <button onclick="startVoice()">🎤</button>
-            <button onclick="sendMessage()">➤</button>
-        </div>
+    <section class="section" id="features">
+      <div class="section-heading centered">
+        <span class="section-tag">TRAVEL SMARTER</span>
+        <h2>Everything you need to <span>explore</span></h2>
+        <p>One platform for a more informed travel experience.</p>
+      </div>
 
-        <p class="voice-note">
-            Ask questions in English, Hindi, Telugu or Tamil.
-        </p>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <div class="feature-icon">🤖</div>
+          <h3>AI Travel Assistant</h3>
+          <p>Ask travel questions and get helpful guidance.</p>
+        </article>
 
-    </div>
-</section>
+        <article class="feature-card">
+          <div class="feature-icon">🎙️</div>
+          <h3>Voice Assistant</h3>
+          <p>Explore voice-based travel assistance where supported.</p>
+        </article>
 
-<footer>
-    <h2>Explore<span>X</span></h2>
-    <p>Your World. Your Journey. Your Experience.</p>
+        <article class="feature-card">
+          <div class="feature-icon">🏨</div>
+          <h3>Hotel Discovery</h3>
+          <p>Explore accommodation options for your journey.</p>
+        </article>
 
-    <div class="footer-links">
-        <a href="#home">Home</a>
-        <a href="#destinations">Destinations</a>
-        <a href="#hotels">Hotels</a>
-        <a href="#chatbot">AI Assistant</a>
-    </div>
+        <article class="feature-card">
+          <div class="feature-icon">🍜</div>
+          <h3>Local Food Finder</h3>
+          <p>Discover regional food and local dining experiences.</p>
+        </article>
 
-    <p class="copyright">
-        © 2026 ExploreX. All Rights Reserved.
-    </p>
-</footer>
+        <article class="feature-card">
+          <div class="feature-icon">💰</div>
+          <h3>Budget Planner</h3>
+          <p>Organise your estimated travel expenses.</p>
+        </article>
 
-<script src="script.js"></script>
+        <article class="feature-card">
+          <div class="feature-icon">🧭</div>
+          <h3>Local Experiences</h3>
+          <p>Find interesting places and activities to explore.</p>
+        </article>
+      </div>
+    </section>
+  </main>
 
+  <footer class="footer">
+    <a href="#" class="logo">Explore<span>X</span></a>
+    <p>Discover beyond boundaries. Explore responsibly.</p>
+    <small>© 2026 ExploreX. All rights reserved.</small>
+  </footer>
+
+  <script src="translations.js"></script>
+  <script src="destinations.js"></script>
+  <script src="planner.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
+

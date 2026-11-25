@@ -1,0 +1,76 @@
+
+document.addEventListener("DOMContentLoaded", function () {
+  const plannerForm = document.getElementById("plannerForm");
+
+  if (!plannerForm) {
+    console.warn("Trip planner form was not found.");
+    return;
+  }
+
+  plannerForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const destination =
+      document.getElementById("destination")?.value.trim();
+
+    const startDate =
+      document.getElementById("startDate")?.value;
+
+    const endDate =
+      document.getElementById("endDate")?.value;
+
+    const travelers =
+      document.getElementById("travelers")?.value;
+
+    const budget =
+      document.getElementById("budget")?.value;
+
+    if (!destination || !startDate || !endDate || !travelers || !budget) {
+      alert("Please complete all trip details.");
+      return;
+    }
+
+    if (new Date(endDate) < new Date(startDate)) {
+      alert("Return date must be after the departure date.");
+      return;
+    }
+
+    const summary = `
+      <div class="trip-result">
+        <h3>🌍 Your Trip Plan</h3>
+        <p><strong>Destination:</strong> ${escapeHTML(destination)}</p>
+        <p><strong>Departure:</strong> ${escapeHTML(startDate)}</p>
+        <p><strong>Return:</strong> ${escapeHTML(endDate)}</p>
+        <p><strong>Travelers:</strong> ${escapeHTML(travelers)}</p>
+        <p><strong>Budget:</strong> ${escapeHTML(budget)}</p>
+        <p>✨ Your trip details are ready. Explore your destination before booking!</p>
+      </div>
+    `;
+
+    let resultBox = document.getElementById("tripResult");
+
+    if (!resultBox) {
+      resultBox = document.createElement("div");
+      resultBox.id = "tripResult";
+      plannerForm.insertAdjacentElement("afterend", resultBox);
+    }
+
+    resultBox.innerHTML = summary;
+    resultBox.scrollIntoView({
+      behavior: "smooth",
+      block: "center"
+    });
+  });
+
+  function escapeHTML(value) {
+    return String(value).replace(/[&<>"']/g, function (character) {
+      return {
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#039;"
+      }[character];
+    });
+  }
+});

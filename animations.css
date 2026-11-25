@@ -1,0 +1,132 @@
+
+/* =================================
+   EXPLOREX - ANIMATIONS
+================================= */
+
+/* SMOOTH WEBSITE SCROLLING */
+html {
+  scroll-behavior: smooth;
+}
+
+/* FADE IN ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* FLOATING EFFECT */
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* GLOWING EFFECT */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(120, 80, 255, 0.2);
+  }
+
+  50% {
+    box-shadow: 0 0 22px rgba(120, 80, 255, 0.65);
+  }
+}
+
+/* GRADIENT ANIMATION */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* HERO SECTION */
+.hero-content {
+  animation: fadeIn 1.2s ease both;
+}
+
+.hero-content h1 span {
+  background-size: 200% 200%;
+  animation: gradientMove 5s ease infinite;
+}
+
+/* FLOATING DESTINATION CARDS */
+.destination-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.destination-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(100, 80, 255, 0.25);
+}
+
+/* IMAGE ZOOM */
+.destination-card img {
+  transition: transform 0.6s ease;
+}
+
+.destination-card:hover img {
+  transform: scale(1.08);
+}
+
+/* BUTTON HOVER */
+button,
+.btn {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover,
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(100, 80, 255, 0.3);
+}
+
+/* FEATURE CARDS */
+.feature-card {
+  transition: transform 0.35s ease, border-color 0.35s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(150, 120, 255, 0.7);
+}
+
+/* FLOATING DECORATION */
+.floating {
+  animation: floating 4s ease-in-out infinite;
+}
+
+/* PLANNER GLOW */
+.planner-container {
+  animation: glow 4s ease-in-out infinite;
+}
+
+/* ACCESSIBILITY: REDUCE MOTION */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
